@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buy Stationery</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ba2cf90f3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Stationery in motion  <i class='fas fa-edit' style='font-size:48px;color:red'></i></h1>
+    </header>
+
+    <nav>
+
+        <ul>
+            
+            <li><a href="#home">Home</a></li>
+            <li><a href="#books">Stationery</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li> <button id="cartButton">Cart</button></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h2>Home</h2>
+        <img src ="stationery33.png" alt="bookstore">
+        <p></p>
+    </section>
+    <section id="books">
+        <h2>Buy your Stationery</h2>
+        <ul id="bookList">
+            <li>
+               <img src="oil-pastel.jpg" alt="Book 1"style="width: 150px; height: 200px;">
+                <h3>Camel Oil Pastel Color</h3>
+                <p>Available shades:48</p>
+                <p>Price:5$</p>
+                <button onclick="addToCart(1)">Add to Cart<i class='fas fa-cart-arrow-down'></i></button>
+              
+            </li>
+            <li>
+                <img src="sticky_notes.png" alt="Book 2"style="width: 150px; height: 200px;">
+                <h3>Sticky Notes</h3>
+                <p>Available:Multicolored</p>
+                <p>Price: $4</p>
+                <button onclick="addToCart(2)">Add to Cart<i class='fas fa-cart-arrow-down'></i></button>
+                
+            </li>
+            <li>
+                <img src="note_book.jpg" alt="Book 3"style="width: 150px; height: 200px;">
+                <h3>Epic Stuff Friends TV Series A5 </h3>
+                <p>Available : Combo Pack of 3 Notebook</p>
+                <p>Price: $8</p>
+                <button onclick="addToCart(3)">Add to Cart<i class='fas fa-cart-arrow-down'></i></button>
+                
+            </li>
+        </ul>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+<p style = "font-size :16;">
+      we are dedicated individuals who are enthusiastic about [insert main topic or niche of your blog]. Our team is composed of experts in the field, including [list relevant credentials or qualifications of team members], who bring their unique perspectives and insights to the blog.
+</p>
+<h3>
+Our Mission
+</h3>
+<p>
+
+Our mission is to provide high-quality, informative, and engaging content that adds value to the lives of our readers. We aim to inspire, educate, and entertain our audience through our blog posts, articles, and other forms of content. We are committed to being a reliable source of information and a trusted resource for our readers.
+</p>
+<h3>
+What We Offer
+</h3>
+<p>
+At our blog, you can expect to find a wide range of content related to [insert main topic or niche of your blog]. From in-depth articles and how-to guides to thought-provoking opinion pieces and inspiring stories, we cover a diverse range of topics to cater to the interests of our audience.
+</p>
+<p>
+Our content is carefully researched and written by our team of experts to ensure accuracy and relevance. We strive to provide practical and actionable advice, tips, and insights that our readers can implement in their daily lives.
+</p>
+<h3>
+Why We Do It
+</h3>
+<p>
+We are passionate about [insert main topic or niche of your blog] and believe that sharing knowledge, experiences, and stories can empower and inspire others. We are committed to creating a positive impact on our readers' lives and fostering a sense of community and connection among our audience.
+</p>
+<p>
+We also value the feedback and engagement of our readers, as it helps us improve our content and better serve our audience's needs. We are constantly learning and growing, and we are excited to continue this journey with our readers.
+</p>
+<h3>
+Get Involved
+</h3>
+<p>
+We invite you to join our community and be part of the conversation. You can engage with us through comments, social media, and by subscribing to our newsletter to stay updated with our latest content. We also welcome guest contributions from experts and enthusiasts in our field, as we believe in collaborating and sharing knowledge.
+</p>
+<h3>
+Thank you for visiting our blog and being part of our journey. We look forward to providing you with valuable content and building a meaningful relationship with you.
+</h3>
+<p>
+Sincerely,
+</p>
+<p>
+ 21bce201</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, please feel free to contact us using the form below:</p>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Name">
+            <input type="email" id="email" placeholder="Email">
+            <textarea id="message" placeholder="Message"></textarea>
+            <button id="submit"onclick="navigateToSignup()">Submit</button>
+        </form>
+        <div ng-app="chatbotApp" ng-controller="ChatbotController">
+            <div class="chatbot-container">
+              <div class="chatbot-header">
+                <h3>AI Chatbot</h3>
+                <button ng-click="toggleChatbot()">X</button>
+              </div>
+              <div class="chatbot-body" ng-show="chatbotVisible">
+                <ul class="chatbot-messages">
+                  <li ng-repeat="message in messages track by $index" ng-class="{ 'bot-message': message.sender === 'bot', 'user-message': message.sender === 'user' }">
+                    {{ message.text }}
+                  </li>
+                </ul>
+                <div class="chatbot-input">
+                  <input type="text" ng-model="inputText" placeholder="Type your message here...">
+                  <button ng-click="sendMessage()">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+ <div id="cart" class="cart">
+   <table>
+    <tr>
+        <pre><td><h2>Cart</h2></td> 
+    </pre>
+    <td>
+        <i class='fas fa-angle-double-right'id="closeButton" style='font-size:36px'></i>
+    </td></tr>
+        <!-- <h2>Cart</h2> -->
+ </table>
+        <ul id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <p id="totalPrice">Total Price: $0</p>
+        <button onclick="checkout()"onclick="navigateToSignup()">Checkout</button>
+   
+</div> 
+<script>
+    function navigateToSignup() {
+                console.log("hey")
+                window.location.href = "wtinn.html";
+      }
+</script>
+
+  
+    <footer>
+
+        <p>&copy; 2023 Book Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script2.js"></script>
+
+</body>
+</html>

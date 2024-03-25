@@ -1,0 +1,159 @@
+/* script2.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1c2331;
+    position:sticky;
+    top:0px;
+    color: #fff;
+    padding: 20px;
+}
+
+nav {
+    background-color: #2c3e50;
+    position : sticky;
+    top:100px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position : sticky;
+    top:100px;
+
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline-block;
+    position : sticky;
+    top:100px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: #fff;
+    text-decoration: none;
+    position : sticky;
+    top:100px;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+ text-decoration: underline;
+ position : sticky;
+    top:100px;
+
+}
+
+section {
+    padding: 20px;
+}
+
+#bookList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#bookList li {
+    flex: 1;
+    margin: 20px;
+    text-align: center;
+}
+
+#bookList img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#bookList h3 {
+    margin: 10px 0;
+}
+
+#bookList p {
+    margin: 5px 0;
+}
+#cartButton{
+    position:sticky;
+    margin-bottom:12px;
+}
+#cart {
+    position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #fff;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+}
+#cart.open {
+            right: 0;
+        }
+#cart.close {
+            display: none;
+        }
+#cartItems {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#cart img
+{
+    width: 50px;
+  height: 50px;
+  padding:4px;
+}
+#cartItems li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#totalPrice {
+    margin-top: 20px;
+}
+button.remove-button {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+#contactForm input, #contactForm textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#contactForm button {
+    padding: 10px;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #34495e;
+}
+
+footer {
+    background-color: #1c2331;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}

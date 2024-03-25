@@ -1,0 +1,48 @@
+body {
+    color:white;
+    background-image: url('sta_new.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.368); /* Transparent background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+label, input, button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+}
+
+button {
+    color:azure;
+    width: 100%;
+    padding: 5px;
+    background-color: #f77ea6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius:50%;
+    font-size: large;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b7aaa8; /* Darker background color on hover */
+}
